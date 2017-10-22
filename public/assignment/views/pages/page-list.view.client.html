@@ -1,0 +1,68 @@
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <!--back-->
+    <p class="navbar-text pull-left">
+      <a href="#/user/{{model.userId}}/website" class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+      </p>
+    <!--name of the page-->
+    <p class="navbar-header pull-left">
+      <a class="navbar-brand thick"
+         >
+        Pages
+      </a>
+    </p>
+
+    <!--Add new page-->
+    <p class="navbar-text pull-right">
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/new	"
+         class="navbar-link ">
+          <span class="glyphicon glyphicon-plus ">
+          </span>
+      </a>
+
+    </p>
+
+  </div>
+</nav>
+<!--header close-->
+
+
+<!--LIST-->
+
+<div class="container">
+
+
+  <p ng-repeat="page in model.pages">
+    <!--Name-->
+    <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}/widget">
+     {{page.name}}
+    </a>
+
+    <!--EDIT-->
+    <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}">
+      <span class="glyphicon glyphicon-pencil pull-right "></span>
+    </a>
+  </p>
+
+</div>
+
+
+<!--footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="row navbar-text pull-right">
+      <!--Profile-->
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+
+    </div>
+  </div>
+</nav>
+<!--footer close-->

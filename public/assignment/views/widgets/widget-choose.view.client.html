@@ -1,0 +1,133 @@
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <!--back-->
+    <p class="navbar-text pull-left">
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget" class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left ">
+          </span>
+      </a>
+
+    </p>
+
+    <!--name of the page-->
+    <p class="navbar-header pull-left">
+      <a class="navbar-brand thick"
+        >
+        Choose Widget
+      </a>
+    </p>
+  </div>
+</nav>
+<!--header close-->
+
+
+<!--LIST-->
+<div class="container">
+
+  <div ng-show="model.error" class="alert alert-danger">
+    {{model.error}}
+  </div>
+  <!--Name-->
+  <p>
+    <a href="">
+      Blog Post
+    </a>
+
+
+  </p>
+
+  <p>
+    <!--Name-->
+    <a ng-click="model.createHeaderWidget(model.pageId)">
+     Header
+    </a>
+
+  </p>
+  <!--Name-->
+  <p>
+    <a href="">
+      Label
+    </a>
+
+  </p>
+
+  <p>
+    <!--Name-->
+    <a  ng-click="model.createHTMLWidget(model.pageId)">
+      HTML
+    </a>
+
+  </p>
+
+  <p>
+    <!--Name-->
+    <a  ng-click="model.createTEXTWidget(model.pageId)">
+      Text Input
+    </a>
+  </p>
+
+
+  <p>
+  <!--Name-->
+  <a href="" >
+    Link
+  </a>
+</p>
+
+  <p>
+    <!--Name-->
+    <a >
+      Button
+    </a>
+  </p>
+
+  <p>
+    <!--Name-->
+    <a ng-click="model.createImageWidget(model.pageId)">
+      Image
+    </a>
+  </p>
+
+  <p>
+    <!--Name-->
+    <a ng-click="model.createYoutubeWidget(model.pageId)">
+      Youtube
+    </a>
+  </p>
+
+  <p>
+    <!--Name-->
+    <a >
+      Data Table
+    </a>
+  </p>
+
+
+  <p>
+    <!--Name-->
+    <a>
+      Repeater
+    </a>
+  </p>
+
+
+
+</div>
+
+<!--footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="row navbar-text pull-right">
+      <!--Profile-->
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+
+    </div>
+  </div>
+</nav>
+<!--footer close-->
+

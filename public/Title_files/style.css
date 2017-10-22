@@ -1,0 +1,24 @@
+input.form-control {
+  margin-bottom: 8px;
+}
+
+.form-group{
+  margin-bottom: 0px;
+}
+
+body {
+  padding-top: 58px;
+  padding-bottom: 32px;
+}
+
+
+a.thick {
+  font-weight: bold;
+}
+
+
+.glyph-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: 4px;
+}

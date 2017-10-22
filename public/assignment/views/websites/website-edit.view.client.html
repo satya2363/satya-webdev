@@ -1,0 +1,102 @@
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+      <!--back-->
+
+        <a href="" class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left ">
+
+          </span>
+        </a>
+
+        <!--name of the page-->
+    <p class="navbar-header pull-left">
+
+      <a class="navbar-brand thick">
+       Edit Website
+      </a>
+    </p>
+
+
+    <!--OK-->
+    <p class="navbar-text pull-right">
+      <a ng-click="model.updateWebsite(model.website)" class="navbar-link ">
+          <span class="glyphicon glyphicon-ok ">
+          </span>
+      </a>
+
+    </p>
+
+  </div>
+</nav>
+<!--header close-->
+
+<!--FORM-->
+<div class="container">
+
+  <div ng-show="model.err" class="alert alert-danger">
+    {{model.err}}
+  </div>
+  <div ng-show="model.success" class="alert alert-success">
+    {{model.success}}
+  </div>
+
+  <div ng-show="model.error" class="alert alert-danger">
+    {{model.error}}
+  </div>
+
+  <div ng-show="model.notSuccess" class="alert alert-danger">
+    {{model.notSuccess}}
+  </div>
+
+  <!--Name of the new application-->
+  <form>
+    <div class="form-group">
+      <label for="application name"> Website Name</label>
+      <input ng-model="model.website.name" type="text"
+             class="form-control"
+             id="application name"
+             placeholder="Blogger" required>
+      <p ng-show="model.err" >
+        {{model.err}}
+      </p>
+    </div>
+    <!--Description of the  application-->
+    <div class="form-group">
+      <label for="Description">Website Description</label>
+      <textarea ng-model="model.website.description" class="form-control"
+                rows="5" id="Description"
+                placeholder="Description"></textarea>
+    </div>
+    <a class="btn btn-danger btn-block"
+       ng-click="model.deleteWebsite(model.websiteId)">Delete</a>
+
+  </form>
+</div>
+<!---footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+
+    <!--Link to Profile-->
+    <div class="row navbar-text pull-right">
+
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+
+    </div>
+
+    <!--share-alt-->
+    <div class="row navbar-text ">
+
+      <a href="#">
+        <span class="glyphicon glyphicon-share-alt "></span>
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+<!--footer close-->

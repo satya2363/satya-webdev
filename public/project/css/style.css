@@ -1,0 +1,149 @@
+input.form-control {
+  margin-bottom: 5px;
+}
+a
+{
+  cursor: hand;
+}
+
+.red
+{
+  color:red;
+}
+
+.blue
+{
+  color:#122b40;
+}
+form,select
+{
+  margin-bottom:5px;
+}
+
+
+input.ng-invalid
+{
+  /*border: #ff3d3d;*/
+  border-color: #cd0a0a;
+  /*background-color:#7FFFD4;*/
+}
+
+
+li:hover{
+  background-color: #82888a;
+}
+body {
+
+  /*background-color:#8c8c8c;*/
+  padding-top: 60px;
+  padding-bottom: 77px;
+}
+h1,h2,h3,h4,h5,h6
+{
+  color:inherit;
+}
+
+label
+{
+  color: white;
+}
+a
+{
+  color: inherit;
+  cursor: hand;
+}
+
+
+
+nav.navbar{
+  max-height: 34px;
+}
+span.glyphicon.glyphicon-chevron-left
+{
+  margin-right:7px  ;
+  margin-left:-5px
+}
+
+span.glyphicon.glyphicon-share-alt
+{
+  padding-left:15px  ;
+}
+
+span.glyphicon.glyphicon-pencil
+{
+  padding-right:7px  ;
+}
+
+span.glyphicon.glyphicon-eye-open
+{
+  padding-left:15px  ;
+}
+
+span.glyphicon.glyphicon-user
+{
+  margin-right: 15px;
+}
+div.widget-tool {
+  position: absolute;
+  right: 15px;
+  background-color: white;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 8px;
+  opacity:0.9;
+}
+
+a.thick {
+  font-weight: bold;
+
+}
+
+div.thick {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*body {*/
+  /*font: 20px Montserrat, sans-serif;*/
+  /*line-height: 1.8;*/
+  /*color: #f5f6f7;*/
+/*}*/
+
+
+
+.bg-1 {
+  /*background-color: #1abc9c; !* Green *!*/
+  background:url("restaurant-widescreen-wallpaper_1298x730.jpg") no-repeat center center fixed;
+  background-size:100% auto;
+
+  color: #ffffff;
+}
+.bg-2 {
+  background-color: #474e5d; /* Dark Blue */
+  color: #ffffff;
+}
+.bg-3 {
+  background-color: #ffffff; /* White */
+  color: #555555;
+}
+.bg-4 {
+  background-color: #2f2f2f; /* Black Gray */
+  color: #fff;
+}
+.container-fluid {
+  padding-top:50px;
+  padding-bottom: 320px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #f4511e;
+}
+.carousel-indicators li {
+  border-color: #f4511e;
+}
+.carousel-indicators li.active {
+  background-color: #f4511e;
+}

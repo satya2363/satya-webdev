@@ -1,0 +1,84 @@
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <!--back-->
+    <p class="navbar-text pull-left">
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page"
+         class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left ">
+          </span>
+      </a>
+
+    </p >
+    <!--name of the page-->
+    <p class="navbar-header pull-left">
+      <a class="navbar-brand thick"
+         >
+        Widgets
+      </a>
+    </p>
+
+    <!--Add new widget-->
+    <p class="navbar-text pull-right">
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new"
+         class="navbar-link ">
+          <span class="glyphicon glyphicon-plus ">
+          </span>
+      </a>
+
+    </p>
+
+  </div>
+</nav>
+<!--header close-->
+
+
+<!--LIST-->
+
+<!--Header-->
+
+
+<wam-sortable data="model.widgets" model="model" callback="model.reorderWidgets(start,end)"></wam-sortable>
+
+
+
+<!--footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+
+
+
+      <!--PLAY-->
+    <p class="navbar-text pull-left">
+      <a >
+        <span class="glyphicon glyphicon-play "></span>
+      </a>
+      </p>
+
+
+
+     <!---EYE--->
+    <p class="navbar-text pull-left">
+      <a >
+        <span class="glyphicon glyphicon-eye-open "></span>
+      </a>
+  </p>
+
+
+
+
+      <!--PROFILE-->
+    <p class="navbar-text pull-right">
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>
+
+<!--footer close-->
+

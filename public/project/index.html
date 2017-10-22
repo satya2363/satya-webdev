@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RestaurantReservation">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Home Page</title>
+  <!--Bootstrap css CDN-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!---mobile first---->
+  <meta name="apple-mobile-web-app-capable" content ="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content ="black">
+  <meta name="viewport" content ="initial-scale=1.25,user-scalable=no">
+ <!-- jQuery-->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <!---font awesome-------->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!--------ng-datepicker css--------->
+  <link rel="stylesheet" type="text/css" href="../css/ngDatepicker.css">
+
+  <!------moment------->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js"></script>
+
+
+
+  <!----jquery css-------->
+  <link href="../css/jquery-ui.css" rel="stylesheet">
+
+  <!----jquery--->
+
+  <script src="../js/jquery.js" ></script>
+
+  <!---jquery uI---->
+  <script src = "../js/jquery-ui.js"></script>
+
+  <!--CSS-->
+  <link href="css/style.css" rel="stylesheet"/>
+  <!--Angular-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <!--Angular Routing-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+
+  <!------ng-datepicker js------->
+  <script type="text/javascript" src="../js/ngDatepicker.min.js"></script>
+
+
+  <!--app.js-->
+  <script src="app.js"></script>
+
+  <!--configuration-->
+  <script src="config.js"></script>
+
+  <!----SERVICES----->
+  <!--user service-->
+  <script src="services/user.service.client.js"></script>
+  <!--location service-->
+  <script src="services/location.service.client.js"></script>
+
+  <!--restaurant service-->
+  <script src="services/restaurant.service.client.js"></script>
+
+  <!--restaurant service-->
+  <script src="services/reservation.service.client.js"></script>
+
+  <!--restaurant service-->
+  <script src="services/manager.service.client.js"></script>
+
+
+  <!---CONTROLLERS-->
+
+  <!--Login Controller-->
+  <script src="views/user/login.controller.client.js"></script>
+  <!--Register Controller-->
+  <script src="views/user/register.controller.client.js"></script>
+  <!--Profile Controller-->
+  <script src="views/user/profile.controller.client.js"></script>
+
+
+  <!--Home Controller-->
+  <script src="views/home.controller.client.js"></script>
+
+  <!--LoggedIn Controller-->
+  <script src="views/user/loggedIn.controller.client.js"></script>
+
+  <!--Location Controller-->
+  <script src="views/location/location.controller.client.js"></script>
+
+  <!--Restaurant Controller-->
+  <script src="views/restaurant/restaurant.controller.client.js"></script>
+
+  <!--Reservation Controller-->
+  <script src="views/reservation/reservation.controller.client.js"></script>
+
+  <!--slot Controller-->
+  <script src="views/slot/slot.controller.client.js"></script>
+
+  <!--slot Controller-->
+  <script src="views/favourites/favourites.controller.client.js"></script>
+
+  <!--manager login Controller-->
+  <script src="views/manager/manager.login.controller.client.js"></script>
+
+  <!--manager register Controller-->
+  <script src="views/manager/manager.register.controller.client.js"></script>
+
+  <!--manager reservations Controller-->
+  <script src="views/manager/manager.reservations.controller.client.js"></script>
+
+  <!--manager slots Controller-->
+  <script src="views/manager/slots/manager.slots.controller.client.js"></script>
+
+  <!--manager slots Controller-->
+  <script src="views/manager/manager.dashboard.controller.client.js"></script>
+
+  <!--manager messages Controller-->
+  <script src="views/manager/messages/manager.message.controller.client.js"></script>
+
+  <script src="./bower_components/oauth-signature/dist/oauth-signature.js"></script>
+
+
+
+
+</head>
+
+
+<!--body-->
+<body class="container-fluid">
+<div ng-view >
+
+
+</div>
+</body>
+</html>

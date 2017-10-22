@@ -1,0 +1,84 @@
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+
+    <!--back-->
+    <p class="navbar-text pull-left">
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget" class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left ">
+          </span>
+      </a>
+    </p>
+    <!--name of the page-->
+
+    <p class="navbar-header pull-left">
+      <a class="navbar-brand thick" >
+        TEXT Widget Edit
+      </a>
+    </p>
+
+    <!--OK-->
+    <p class="navbar-text pull-right">
+      <a ng-click="model.updateWidget(model.widget)" class="navbar-link ">
+          <span class="glyphicon glyphicon-ok ">
+          </span>
+      </a>
+
+    </p>
+
+  </div>
+</nav>
+<!--header close-->
+<div ng-show="model.err" class="alert alert-danger">
+  {{model.err}}
+</div>
+<label>Name</label>
+<input ng-model="model.widget.name" class="form-control" required/>
+<p ng-show="model.err" >
+  {{model.err}}
+</p>
+
+<label>Text</label>
+  <input ng-model="model.widget.text" class="form-control"/>
+  <label> Rows</label>
+  <input ng-model="model.widget.rows" class="form-control" type="number"/>
+  <label> Placeholder</label>
+  <input ng-model="model.widget.placeholder" class="form-control"/>
+  <label> Formatted </label>
+<div class="input-group">
+  <input type="text"
+         readonly
+         value="Formatted"
+         class="form-control"/>
+    <span class="input-group-addon">
+        <input ng-model="model.widget.formatted"
+               type="checkbox"/>
+    </span>
+</div>
+
+
+<p>
+  <a class="btn btn-danger btn-block"
+     ng-click="model.deleteWidget(model.widgetId)">Delete</a>
+</p>
+
+
+
+
+<!---footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+
+    <!--Link to Profile-->
+    <div class="row navbar-text pull-right">
+
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+
+    </div>
+  </div>
+</nav>
+<!--footer close-->
+

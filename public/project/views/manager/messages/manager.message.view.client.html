@@ -1,0 +1,67 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+
+    <p class="navbar-header pull-left">
+    <a href="#/manager" class="navbar-brand thick">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  </p>
+    <p class="navbar-header pull-left">
+      <a
+        class="navbar-brand thick">
+        Messages
+      </a>
+    </p>
+
+
+
+  </div>
+</nav>
+
+<div class="container">
+  <br/>
+  <p><b>Filter by name</b></p>
+  <p>
+  <div class="input-group">
+    <input ng-model="model.username" type="text" class="form-control" placeholder="subbu">
+    <span class="input-group-btn">
+        <a ng-click="model.searchUser(model.username)" class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-search"></span>
+        </a>
+    </span>
+  </div>
+  </p>
+<!--<ul ng-show="!model.messageShow" class="list-group" ng-repeat="message in model.user.messages">-->
+  <!--<li class="list-group-item"><p>{{message.username}}:</p>  <p>{{message.message}}-->
+   <!--<a ng-click="model.deleteMessage(message,model.user._id)"> <span class="glyphicon glyphicon-trash pull-right"></span></a></p></li>-->
+  <!--</ul>-->
+
+  <!--<ul ng-show="model.messageShow" class="list-group" ng-repeat="message in model.user.messages">-->
+    <!--<li ng-if="model.username == message.username" class="list-group-item"><p>{{message.username}}:</p>  <p>{{message.message}}-->
+      <!--<a ng-click="model.deleteMessage(message,model.user._id)"> <span class="glyphicon glyphicon-trash pull-right"></span></a></p></li>-->
+  <!--</ul>-->
+  <div ng-show="!model.messageShow" class="panel-group" ng-repeat="message in model.user.messages">
+    <div class="panel panel-default">
+      <div class="panel-heading"><p>{{message.username}}</p></div>
+      <div class="panel-body"><p>{{message.message}}
+        <a ng-click="model.deleteMessage(message,model.user._id)">
+          <span class="glyphicon glyphicon-trash pull-right"></span></a></p>
+      </div>
+    </div>
+    </div>
+
+  <div ng-show="model.messageShow" class="panel-group" ng-repeat="message in model.user.messages">
+    <div ng-if="model.username == message.username" class="panel panel-default">
+      <div class="panel-heading"><p>{{message.username}}</p></div>
+      <div class="panel-body"><p>{{message.message}}
+        <a ng-click="model.deleteMessage(message,model.user._id)">
+          <span class="glyphicon glyphicon-trash pull-right"></span></a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+

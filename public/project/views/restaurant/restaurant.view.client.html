@@ -1,0 +1,140 @@
+
+<nav  class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <p class="navbar-header pull-left">
+        <a href="#/location/{{model.location}}/" class="navbar-brand thick">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </p>
+      <a class="navbar-brand thick" href="#/home"> RR  </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-inverse navbar-nav navbar-right">
+        <li ng-show="!model.loggedIn"  ><a href="#/login">login as costumer</a></li>
+        <li ng-show="!model.loggedIn" ><a href="#/managerLogin">login as manager</a></li>
+      </ul>
+      <ul class="nav navbar-inverse navbar-nav navbar-right">
+        <li ng-show="model.loggedIn" ><a href="#/user">{{model.user.username}}</a></li>
+        <li ng-show="model.loggedIn"><a ng-click="model.logout()"><span class="glyphicon glyphicon-log-out">
+          </span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!---------Restaurant Search-------->
+<div class="container">
+  <br/>
+  <div ng-show=" model.added " class="alert alert-success">
+    <p>Added to My Favourites</p>
+  </div>
+
+  <div ng-show=" model.remove " class="alert alert-danger" role="alert">
+    <p>Removed from My Favourites</p>
+  </div>
+  <div class="row">
+  <div class="col-sm-6">
+    <h1> <b>{{model.restaurant.name}}</b></h1>
+  <img ng-src="{{model.restaurant.image_url}}" width="150px">
+    <br/>
+    <img ng-src="{{model.restaurant.rating_img_url_small}}">
+
+  </div>
+
+    <hr>
+    <div class="col-sm-6">
+      <div ng-show="!model.favRestaurant">
+      <buton ng-click="model.addToFavourites(model.restaurant)" class="btn btn-success">
+        <span class="glyphicon glyphicon-star-empty"></span> Add to Favourites
+      </buton>
+        </div>
+
+      <div ng-show="model.favRestaurant">
+        <buton ng-click="model.removeFavourites(model.restaurant)" class="btn btn-danger">
+          Remove from Favourites
+        </buton>
+      </div>
+      <br/>
+      <div>
+      <a ng-click="model.makeReservation()"
+         class="btn btn-primary ">Make Reservation</a>
+      </div>
+
+
+
+    </div>
+
+    </div>
+  <hr>
+  <div class="">
+    <h4><b>Cuisines</b></h4>
+    <div ng-repeat="category in model.restaurant.categories">
+      <p>{{category[0]}}</p>
+    </div>
+  </div>
+
+  <hr>
+  <div>
+  <h4><b>Address</b></h4>
+  <div  ng-repeat="location in model.restaurant.location.display_address">
+   <p> {{location}}</p>
+    </div>
+    <hr>
+    <h4><b>Phone:</b></h4>
+    {{model.restaurant.display_phone}}
+    </div>
+  <hr>
+  <div >
+<h4><b>Reviews from Yelp</b></h4>
+    </div>
+  <div ng-repeat="review in model.restaurant.reviews" >
+    <div  class="col-sm-3">
+      <div align="center">
+    <img ng-src="{{review.user.image_url}}" class="img-responsive img-circle">
+        </div>
+      <div align="center">
+      <h6>{{review.user.name}}</h6>
+        </div>
+    </div>
+    <div class="col-sm-6">
+    {{review.excerpt}}<br/>
+      <img ng-src="{{review.rating_image_small_url}}">
+      </div>
+
+
+</div>
+</div>
+
+<div class="container">
+  <hr>
+<div ng-show=" model.sentMessage " class="alert alert-success">
+  <p>Message sent successfully</p>
+</div>
+<div ng-show=" model.empty" class="alert alert-danger" role="alert">
+  <p>Cannot send empty message</p>
+</div>
+<p><b>Message to {{model.restaurant.name}}'s manager:</b></p>
+<div ng-show="model.messageerr">
+<form role="form">
+  <div  class="form-group">
+
+    <textarea ng-model="model.message" class="form-control" rows=5"></textarea>
+  </div>
+</form>
+
+  <a ng-click="model.sendMessage(model.message)"
+     class="btn btn-default">Send </a>
+  </div>
+<div ng-show="!model.messageerr">
+  <p>No Manager for this restaurant</p>
+  </div>
+</div>
+</div>
+</div>

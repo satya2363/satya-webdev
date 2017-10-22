@@ -1,0 +1,22 @@
+(function(){
+  angular
+    .module("WebAppMaker")
+    .controller("PageListController",PageListController);
+
+  function PageListController($routeParams,PageService) {
+    var vm = this;
+    vm.websiteId = $routeParams.websiteId;
+    vm.userId = $routeParams.userId;
+    console.log(  vm.websiteId );
+    function init() {
+      PageService.findPagesForWebsiteId(vm.websiteId)
+        .then(function(response){
+
+          vm.pages = response.data;
+        });
+    }
+    init();
+
+
+  }
+})();

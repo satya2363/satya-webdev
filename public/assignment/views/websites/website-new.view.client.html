@@ -1,0 +1,93 @@
+
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+
+
+
+      <!--back-->
+      <div class="navbar-text pull-left">
+        <a href="#/user/{{model.developerId}}/website" class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left ">
+          </span>
+        </a>
+
+      </div>
+    <p class="navbar-header pull-left">
+      <!--name of the page-->
+      <a class="navbar-brand thick" >
+        New Website
+      </a>
+    </p>
+
+    <!--OK-->
+    <div class="navbar-text pull-right">
+      <a ng-click="model.createWebsite(model.website)" class="navbar-link ">
+          <span class="glyphicon glyphicon-ok ">
+          </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+<!--header close-->
+
+<!--FORM-->
+<div class="container">
+
+  <p ng-show="model.err" class="alert alert-danger">
+    {{model.err}}
+  </p>
+
+  <div ng-show="model.success" class="alert alert-success">
+    {{model.success}}
+  </div>
+
+  <div ng-show="model.error" class="alert alert-danger">
+    {{model.error}}
+  </div>
+
+<!--Name of the new application-->
+  <form name="websiteForm" novalidate>
+    <div class="form-group">
+      <label for="application name"> Name</label>
+      <input  ng-model="model.website.name"
+             type="text"
+             class="form-control"
+             id="application name"
+             placeholder="Blogger" required>
+      <p ng-show="model.err" >
+        {{model.err}}
+      </p>
+
+    </div>
+
+    <!--Description of the  application-->
+    <div class="form-group">
+      <label for="Description"> Description</label>
+      <textarea ng-model="model.website.description" class="form-control"
+                rows="5"
+                id="Description"
+                placeholder="Description"></textarea>
+    </div>
+
+
+  </form>
+</div>
+
+<!---footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="row navbar-text pull-right">
+
+      <!--Link to Profile-->
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+
+    </div>
+  </div>
+</nav>
+<!--footer close-->
+

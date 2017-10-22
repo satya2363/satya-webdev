@@ -1,0 +1,106 @@
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+      <!--back-->
+      <p class="navbar-text pull-left">
+        <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget" class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left ">
+          </span>
+        </a>
+      </p>
+        <!--name of the page-->
+
+
+    <p class="navbar-header pull-left">
+
+    <a class="navbar-brand thick" >
+        Widget Edit
+      </a>
+    </p>
+
+    <!--OK-->
+    <p class="navbar-text pull-right">
+      <a ng-click="model.updateWidget(model.widget)" class="navbar-link ">
+          <span class="glyphicon glyphicon-ok ">
+          </span>
+      </a>
+
+    </p>
+
+  </div>
+</nav>
+<!--header close-->
+
+<!--FORM-->
+<div class="container">
+  <div ng-show="model.error" class="alert alert-danger">
+    {{model.error}}
+  </div>
+  <div ng-show="model.err" class="alert alert-danger">
+    {{model.err}}
+  </div>
+  <!--Name of the new application-->
+  <form>
+    <div class="form-group">
+      <label for="post name">Name</label>
+      <input ng-model="model.widget.name"
+            type="text"
+             class="form-control"
+             id="post name"
+             placeholder="youtube video" required>
+      <p ng-show="model.err" >
+        {{model.err}}
+      </p>
+    </div>
+    <!--Text-->
+    <div class="form-group">
+      <label for="text">Text</label>
+      <input ng-model="model.widget.text"
+              type="text"
+             class="form-control"
+             id="text"
+             placeholder="kung fu panda">
+    </div>
+    <!--URL-->
+    <div class="form-group">
+      <label for="size">URL</label>
+      <input ng-model="model.widget.url"
+            type="url"
+             class="form-control"
+             id="size"
+             placeholder="https://www.youtube.com"
+      >
+    </div>
+
+    <!--Width-->
+    <div class="form-group">
+      <label for="width">Width</label>
+      <input ng-model="model.widget.width"
+             type="text"
+             class="form-control"
+             id="width" placeholder="100%">
+    </div>
+    <a class="btn btn-danger btn-block"
+         ng-click="model.deleteWidget(model.widgetId)">Delete</a>
+
+  </form>
+</div>
+<!---footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+
+    <!--Link to Profile-->
+    <div class="row navbar-text pull-right">
+
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+
+    </div>
+
+
+
+  </div>
+</nav>
+

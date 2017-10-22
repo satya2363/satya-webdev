@@ -1,0 +1,130 @@
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!--back-->
+      <p class="navbar-text pull-left">
+        <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget" class="navbar-link ">
+          <span class="glyphicon glyphicon-chevron-left ">
+          </span>
+        </a>
+      </p>
+        <!--name of the page-->
+
+    <p class="navbar-header pull-left">
+      <a class="navbar-brand thick" >
+        Widget Edit
+      </a>
+    </p>
+
+    <!--OK-->
+    <p class="navbar-text pull-right">
+      <a ng-click="model.updateWidget(model.widget)" class="navbar-link ">
+          <span class="glyphicon glyphicon-ok ">
+          </span>
+      </a>
+
+    </p>
+
+  </div>
+</nav>
+<!--header close-->
+
+<!--FORM-->
+<div class="container">
+  <div ng-show="model.error" class="alert alert-danger">
+    {{model.error}}
+  </div>
+  <div ng-show="model.err" class="alert alert-danger">
+    {{model.err}}
+  </div>
+  <!--Name of the new application-->
+  <!--Name-->
+  <form>
+    <div class="form-group">
+      <label for="post name">Name</label>
+      <input ng-model="model.widget.name"
+        type="text"
+        class="form-control"
+        id="post name"
+        placeholder="Wall" required>
+      <p ng-show="model.err" >
+        {{model.err}}
+      </p>
+    </div>
+    <!--Text-->
+    <div class="form-group">
+      <label for="text">Text</label>
+      <input ng-model="model.widget.text"
+        type="text"
+        class="form-control"
+        id="text"
+        placeholder="text for the wall">
+    </div>
+    <!--URL-->
+    <div class="form-group">
+      <label for="size">URL</label>
+      <input ng-model="model.widget.url"
+        type="url"
+        class="form-control"
+        id="size"
+         placeholder="http://www.gettyimages.pt"/>
+    </div>
+
+    <!-------------------------Width------------------------------->
+    <div class="form-group">
+      <label for="width">Width</label>
+      <input ng-model="model.widget.width"
+        type="text"
+        class="form-control"
+        id="width"
+        placeholder="30%" >
+    </div>
+  </form>
+    <!-------------------------upload----------------------------------->
+    <!--<div class="form-group">-->
+      <!--<label for="upload">Upload</label>-->
+      <!--<input  type="file" class="form-control"  id="upload" >-->
+    <!--</div>-->
+<!--<div class="form-group">-->
+    <!--<a class="btn btn-primary btn-block"-->
+       <!--href="#">Upload</a>-->
+<!--</div>-->
+<p>
+    <form action="/api/upload"  method="post" enctype="multipart/form-data">
+      <input  name="myFile"   type="file" class="form-control"/>
+      <input  name="width"    value="{{model.widget.width}}" style="display: none"/>
+      <input  name="widgetId" value="{{model.widget._id}}"   style="display: none"/>
+      <input  name="pageId" value="{{model.pageId}}"   style="display: none"/>
+      <input  name="userId" value="{{model.userId}}"   style="display: none"/>
+      <input  name="websiteId" value="{{model.websiteId}}"   style="display: none"/>
+      <button type="submit"   class="btn btn-block btn-primary">Upload Image</button>
+    </form>
+  </p>
+<p>
+  <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{model.widgetId}}/flickr"
+     class="btn btn-primary btn-block">Add with Flickr</a>
+
+    <a ng-click="model.deleteWidget(model.widgetId)"
+       class="btn btn-danger btn-block">Delete</a>
+</p>
+
+</div>
+
+<!---footer-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+
+    <!--Link to Profile-->
+    <div class="row navbar-text pull-right">
+
+      <a href="#/user">
+        <span class="glyphicon glyphicon-user "></span>
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+<!--footer close-->
+

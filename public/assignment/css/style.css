@@ -1,0 +1,90 @@
+form{
+  margin-bottom:5px;
+}
+input.ng-invalid
+{
+  background-color:#7FFFD4;
+}
+
+input.form-control {
+  margin-bottom: 5px;
+}
+
+body {
+  padding-top: 60px;
+  padding-bottom: 77px;
+}
+
+a
+{
+ cursor: hand;
+
+  text-decoration:none;
+}
+div.ng.click
+{
+  cursor: hand;
+}
+nav.navbar{
+  max-height: 32px;
+}
+span.glyphicon.glyphicon-chevron-left
+{
+margin-right:7px  ;
+  margin-left:-5px
+}
+
+span.glyphicon.glyphicon-share-alt
+{
+  padding-left:15px  ;
+}
+
+span.glyphicon.glyphicon-pencil
+{
+  padding-right:7px  ;
+}
+
+span.glyphicon.glyphicon-eye-open
+{
+  padding-left:15px  ;
+}
+
+span.glyphicon.glyphicon-user
+{
+  margin-right: 15px;
+}
+div.widget-tool {
+  position: absolute;
+  right: 15px;
+  background-color: white;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 8px;
+  opacity:0.9;
+  z-index: 2;
+}
+
+a.thick {
+  font-weight:bold;
+  color:#ffffff;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+
+.youtube-widget {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.youtube-widget iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.input-group-addon
+{
+  background-color: white;
+}
